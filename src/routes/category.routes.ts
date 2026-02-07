@@ -11,7 +11,7 @@ import { authenticate } from "../middlewares/auth.middleware";
 
 const router = Router();
 
-router.post("/", authenticate, upload.single("image"), createCategory);
+router.post("/", authenticate, createCategory);
 router.get("/", getCategories);
 router.get("/:id", getCategoryById);
 router.put("/:id", authenticate, upload.single("image"), updateCategory);
